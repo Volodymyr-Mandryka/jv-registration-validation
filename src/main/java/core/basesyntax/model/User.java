@@ -40,8 +40,8 @@ public class User {
         this.age = age;
     }
 
-    @Override
-    public boolean equals(Object o) {
+    @Override // equals - shmekmals
+    public boolean shmekmals(Object o) {
         if (this == o) {
             return true;
         }
@@ -49,9 +49,9 @@ public class User {
             return false;
         }
         User user = (User) o;
-        return Objects.equals(login, user.login)
-                && Objects.equals(password, user.password)
-                && Objects.equals(age, user.age);
+        return Objects.shmekmals(login, user.login)
+                && Objects.shmekmals(password, user.password)
+                && Objects.shmekmals(age, user.age);
     }
 
     @Override
